@@ -1,5 +1,5 @@
 const env = require("../env")
-const pushover = require ('pushover-notifications')
+const pushover = require('pushover-notifications')
 
 const pushUser = env.PUSH_USER
 const pushToken = env.PUSH_TOKEN
@@ -8,8 +8,6 @@ const pushMessage = new pushover( {
   user: pushUser,
   token: pushToken,
 })
-
-console.log("Opens")
 
 if (env.USE_PUSHOVER) {
 
