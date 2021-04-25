@@ -40,6 +40,18 @@
       "USE_TELEGRAM": {
         "description": "Selects if Telegram will be used",
         "required": false
+      },
+      "USE_PUSHOVER": {
+        "description": "Selects if Pushovers will be used",
+        "required": false
+      },
+      "PUSH_USER": {
+        "description": "Pushover user ID",
+        "required": false
+      },
+      "PUSH_TOKEN": {
+        "description": "Pushover app token",
+        "required": false
       }
     }
   }
