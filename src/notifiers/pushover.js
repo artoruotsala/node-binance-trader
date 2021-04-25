@@ -11,8 +11,6 @@ const pushMessage = new pushover( {
 
 if (env.USE_PUSHOVER) {
 
-  console.log(env.USE_PUSHOVER)
-
   const testMsg = {
     // 'message' is required. All other values are optional.
         message: "PushOver",

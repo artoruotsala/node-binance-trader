@@ -6,6 +6,8 @@ module.exports = function (trading_pairs) {
     notifiers.push(require('./telegram')(trading_pairs))
   if (env.USE_GMAIL)
     notifiers.push(require('./gmail')())
+  if (env.USE_PUSHOVER)
+    notifiers.push(require('./pushover')())
 
   const notifyAllFor = (method, arg) => notifiers.forEach(n => n[method] && n[method](arg));
 
