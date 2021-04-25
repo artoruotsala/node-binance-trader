@@ -1041,6 +1041,8 @@ async function UpdateMarginPairs() {
     })
 }
 
+notifier.notifyEnterShortSignal("Test")
+
 async function run() {
     await UpdateMarginPairs()
     await ExchangeInfo()
