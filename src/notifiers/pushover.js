@@ -9,6 +9,8 @@ const pushMessage = new pushover( {
   token: pushToken,
 })
 
+console.log("Opens")
+
 if (env.USE_PUSHOVER) {
 
   console.log(env.USE_PUSHOVER)
