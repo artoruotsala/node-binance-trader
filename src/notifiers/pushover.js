@@ -9,25 +9,25 @@ const pushMessage = new pushover( {
   token: pushToken,
 })
 
-if (env.USE_PUSHOVER) {
+// if (env.USE_PUSHOVER) {
 
-  const testMsg = {
-    // 'message' is required. All other values are optional.
-        message: "PushOver",
-        title: "PushOver Notification is running",
-        sound: 'cashregister',
-        device: 'devicename',
-        priority: 0,
-        html: 1
-  }
+//   const testMsg = {
+//     // 'message' is required. All other values are optional.
+//         message: "PushOver",
+//         title: "PushOver Notification is running",
+//         sound: 'cashregister',
+//         device: 'devicename',
+//         priority: 0,
+//         html: 1
+//   }
 
-  pushMessage.send( testMsg, function( err, result ) {
-    if ( err ) {
-        throw err
-    }
-    // console.log( result )
-  })
-};
+//   pushMessage.send( testMsg, function( err, result ) {
+//     if ( err ) {
+//         throw err
+//     }
+//     // console.log( result )
+//   })
+// };
 
 function createSignalMessage(base, signal) {
   let msg = base + " :: " + signal.stratname + ' ' + signal.pair + ' ' + signal.price + "\n"
@@ -84,16 +84,16 @@ module.exports = function () {
       return send(createSignalMessage("<b>>> SUCCESS! SELL_SIGNAL :: SELL TO EXIT LONG TRADE</b>", signal));
   }
 
-  const publicMethods = {
-      notifyBuyToCoverSignal,
-      notifyBuyToCoverTraded,
-      notifyEnterLongSignal,
-      notifyEnterLongTraded,
-      notifyEnterShortSignal,
-      notifyEnterShortTraded,
-      notifyExitLongSignal,
-      notifyExitLongTraded,
-      send,
+  return {
+    notifyBuyToCoverSignal,
+    notifyBuyToCoverTraded,
+    notifyEnterLongSignal,
+    notifyEnterLongTraded,
+    notifyEnterShortSignal,
+    notifyEnterShortTraded,
+    notifyExitLongSignal,
+    notifyExitLongTraded,
+    send,
   }
 }
 
