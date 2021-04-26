@@ -44,7 +44,7 @@ module.exports = function () {
     const pushMsg = {
       // 'message' is required. All other values are optional.
           message: message,
-          title: signal.stratname,
+          title: "Binance Robot",
           sound: 'cashregister',
           device: 'devicename',
           priority: 0,
@@ -63,25 +63,25 @@ module.exports = function () {
     return send(createSignalMessage("<i>BUY_SIGNAL :: BUY TO COVER SHORT TRADE</i>", signal));
   }
   function notifyBuyToCoverTraded(signal) {
-      return send(createSignalMessage("<b>>> SUCCESS! BUY_SIGNAL :: BUY TO COVER SHORT TRADE</b>", signal));
+    return send(createSignalMessage("<b>>> SUCCESS! BUY_SIGNAL :: BUY TO COVER SHORT TRADE</b>", signal));
   }
   function notifyEnterLongSignal(signal) {
-      return send(createSignalMessage("<i>BUY_SIGNAL :: ENTER LONG TRADE</i>", signal));
+    return send(createSignalMessage("<i>BUY_SIGNAL :: ENTER LONG TRADE</i>", signal));
   }
   function notifyEnterLongTraded(signal) {
-      return send(createSignalMessage("<b>>> SUCCESS! BUY_SIGNAL :: ENTER LONG TRADE</b>", signal));
+    return send(createSignalMessage("<b>>> SUCCESS! BUY_SIGNAL :: ENTER LONG TRADE</b>", signal));
   }
   function notifyEnterShortSignal(signal) {
-      return send(createSignalMessage("<i>SELL_SIGNAL :: ENTER SHORT TRADE</i>", signal));
+    return send(createSignalMessage("<i>SEL_SIGNAL :: ENTER SHORT TRADE</i>", signal));
   }
   function notifyEnterShortTraded(signal) {
-      return send(createSignalMessage("<b>>> SUCCESS! SELL_SIGNAL :: ENTER SHORT TRADE</b>", signal));
+    return send(createSignalMessage("<b>>> SUCCESS! SELL_SIGNAL :: ENTER SHORT TRADE</b>", signal));
   }
   function notifyExitLongSignal(signal) {
-      return send(createSignalMessage("<i>SELL_SIGNAL :: SELL TO EXIT LONG TRADE</i>", signal));
+    return send(createSignalMessage("<i>SELL_SIGNAL :: SELL TO EXIT LONG TRADE</i>", signal));
   }
   function notifyExitLongTraded(signal) {
-      return send(createSignalMessage("<b>>> SUCCESS! SELL_SIGNAL :: SELL TO EXIT LONG TRADE</b>", signal));
+    return send(createSignalMessage("<b>>> SUCCESS! SELL_SIGNAL :: SELL TO EXIT LONG TRADE</b>", signal));
   }
 
   return {
