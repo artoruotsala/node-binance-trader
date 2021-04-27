@@ -1041,8 +1041,6 @@ async function UpdateMarginPairs() {
     })
 }
 
-notifier.notifyEnterLongSignal("Im testing")
-
 async function run() {
     await UpdateMarginPairs()
     await ExchangeInfo()
