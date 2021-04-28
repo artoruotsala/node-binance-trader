@@ -21,21 +21,21 @@ if (env.USE_PUSHOVER) {
         html: 1
   }
 
-  pushMessage
-    .send(testMsg)
-    .then(() => {
-      console.log('Message sent.');
-    })
-    .catch(error => {
-      console.log('An error occurred.');
-      console.log(error);
-    });
-  // pushMessage.send( testMsg, function( err, result ) {
-  //   if ( err ) {
-  //       throw err
-  //   }
-  //   // console.log( result )
-  // })
+  // pushMessage
+  //   .send(testMsg)
+  //   .then(() => {
+  //     console.log('Message sent.');
+  //   })
+  //   .catch(error => {
+  //     console.log('An error occurred.');
+  //     console.log(error);
+  //   });
+  pushMessage.send( testMsg, function( err, result ) {
+    if ( err ) {
+        throw err
+    }
+    console.log( result )
+  })
 };
 
 function createSignalMessage(base, signal) {
