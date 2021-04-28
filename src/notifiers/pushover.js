@@ -21,12 +21,19 @@ if (env.USE_PUSHOVER) {
         html: 1
   }
 
-  pushMessage.send( testMsg, function( err, result ) {
-    if ( err ) {
-        throw err
-    }
-    // console.log( result )
+  pushMessage
+    .send(testMsg)
+    .catch((err, result) => {
+      console.log( err )
+      console.log( result )
   })
+
+  // pushMessage.send( testMsg, function( err, result ) {
+  //   if ( err ) {
+  //       throw err
+  //   }
+  //   // console.log( result )
+  // })
 };
 
 function createSignalMessage(base, signal) {
