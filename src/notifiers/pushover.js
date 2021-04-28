@@ -23,11 +23,13 @@ if (env.USE_PUSHOVER) {
 
   pushMessage
     .send(testMsg)
-    .catch((err, result) => {
-      console.log( err )
-      console.log( result )
-  })
-
+    .then(() => {
+      console.log('Message sent.');
+    })
+    .catch(error => {
+      console.log('An error occurred.');
+      console.log(error);
+    });
   // pushMessage.send( testMsg, function( err, result ) {
   //   if ( err ) {
   //       throw err
